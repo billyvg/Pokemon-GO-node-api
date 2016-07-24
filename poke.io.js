@@ -17,7 +17,6 @@ var events = require('events');
 var ProtoBuf = require('protobufjs');
 var GoogleOAuth = require('gpsoauthnode');
 var fs = require('fs');
-var s2 = require('s2geometry-node');
 
 var Logins = require('./logins');
 
@@ -239,6 +238,7 @@ function Pokeio() {
     };
 
     // IN DEVELPOMENT, YES WE KNOW IS NOT WORKING ATM
+    /*
     self.Heartbeat = function (callback) {
         var _self$playerInfo2 = self.playerInfo;
         var apiEndpoint = _self$playerInfo2.apiEndpoint;
@@ -274,6 +274,7 @@ function Pokeio() {
             callback(null, heartbeat);
         });
     };
+    */
 
     self.GetLocation = function (callback) {
         geocoder.reverseGeocode.apply(geocoder, _toConsumableArray(GetCoords(self)).concat([function (err, data) {
